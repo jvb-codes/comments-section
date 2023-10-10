@@ -1,6 +1,7 @@
 import styles from "../styles/Com_Input.module.css";
 import { CommentCardStateType } from "../types/types";
 import { useAddMyComment, useHandleTextInput } from "../context/Cards_Context";
+import JuliusOmo from "../images/avatars/image-juliusomo.png";
 
 function SendButton() {
   const { addMyComment } = useAddMyComment();
@@ -10,7 +11,7 @@ function SendButton() {
     parentCommentID: new Date().getUTCMilliseconds(),
     type: "parentComment",
     edit: false,
-    profileImg: "./images/avatars/image-juliusomo.png",
+    profileImg: JuliusOmo,
     userName: "juliusomo",
     date: "Just now",
     comment: textareaValue,

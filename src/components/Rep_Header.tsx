@@ -3,6 +3,7 @@ import {
   useOpenEditBox,
   useHandleDeleteComment,
 } from "../context/Cards_Context";
+import JuliusOmo from "../images/avatars/image-juliusomo.png";
 
 type RepHeaderProps = {
   userName: string;
@@ -27,7 +28,7 @@ function RepHeader({
       <div className={styles["card__header"]}>
         <img
           className={styles["header__avatar"]}
-          src={profileImg}
+          src={JuliusOmo}
           alt="avatar"
         />
         <p className={styles["header__name"]}>{userName}</p>
