@@ -1,5 +1,7 @@
 import styles from "../styles/Cards.module.css";
 import { Dispatch, SetStateAction } from "react";
+import plusIcon from "../images/icon-plus.svg";
+import minusIcon from "../images/icon-minus.svg";
 
 type CardFeedbackProps = {
   feedbackCount: number;
@@ -32,14 +34,14 @@ export default function CardFeedback({
       <img
         className={styles["feedback__up"]}
         onClick={addOneLike}
-        src="./images/icon-plus.svg"
+        src={plusIcon}
         alt="plus-icon"
       />
       <p className={styles["feedback__count"]}>{feedbackCount}</p>
       <img
         className={styles["feedback__down"]}
         onClick={subtractOneLike}
-        src="./images/icon-minus.svg"
+        src={minusIcon}
         alt="minus-icon"
       />
     </div>

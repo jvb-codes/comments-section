@@ -1,5 +1,6 @@
 import styles from "../styles/Cards.module.css";
 import { useIsReplyBoxOpen } from "../context/Cards_Context";
+import replyIcon from "../images/icon-reply.svg";
 
 type ComHeaderProps = {
   parentCommentID: number;
@@ -27,7 +28,7 @@ function ComHeader({
         <p className={styles["header__date"]}>{date}</p>
         <img
           className={styles["header__reply-icon"]}
-          src="./images/icon-reply.svg"
+          src={replyIcon}
           alt="reply-icon"
         />
         <p

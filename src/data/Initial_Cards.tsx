@@ -1,11 +1,14 @@
 import { CommentCardStateType } from "../types/types";
+import AmyRobson from "../images/avatars/image-amyrobson.png";
+import MaxBlagun from "../images/avatars/image-maxblagun.png";
+import RamsesMiron from "../images/avatars/image-ramsesmiron.png";
 
 const InitialCards: CommentCardStateType[] = [
   {
     parentCommentID: 1,
     type: "parentComment",
     edit: false,
-    profileImg: "./images/avatars/image-amyrobson.png",
+    profileImg: AmyRobson,
     userName: "amyrobson",
     date: "1 month ago",
     comment:
@@ -18,7 +21,7 @@ const InitialCards: CommentCardStateType[] = [
     parentCommentID: 2,
     type: "parentComment",
     edit: false,
-    profileImg: "./images/avatars/image-maxblagun.png",
+    profileImg: MaxBlagun,
     userName: "maxblagun",
     date: "2 weeks ago",
     comment:
@@ -30,7 +33,7 @@ const InitialCards: CommentCardStateType[] = [
         parentCommentID: 3,
         type: "childReply",
         edit: false,
-        profileImg: "./images/avatars/image-ramsesmiron.png",
+        profileImg: RamsesMiron,
         userName: "ramsesmiron",
         date: "1 week ago",
         comment:

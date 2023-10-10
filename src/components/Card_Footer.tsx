@@ -6,6 +6,10 @@ import {
   useHandleDeleteComment,
 } from "../context/Cards_Context";
 
+import plusIcon from "../images/icon-plus.svg";
+import minusIcon from "../images/icon-minus.svg";
+import replyIcon from "../images/icon-reply.svg";
+
 type CardFooterProps = {
   feedbackCount: number;
   setFeedbackCount: Dispatch<SetStateAction<number>>;
@@ -48,14 +52,14 @@ function CardFooter({
         <img
           className={styles["feedback__up"]}
           onClick={addOneLike}
-          src="./images/icon-plus.svg"
+          src={plusIcon}
           alt="plus-icon"
         />
         <p className={styles["feedback__count"]}>{feedbackCount}</p>
         <img
           className={styles["feedback__down"]}
           onClick={subtractOneLike}
-          src="./images/icon-minus.svg"
+          src={minusIcon}
           alt="minus-icon"
         />
       </div>
@@ -92,7 +96,7 @@ function CardFooter({
         >
           <img
             className={styles["reply__icon"]}
-            src="./images/icon-reply.svg"
+            src={replyIcon}
             alt="reply-icon"
           />
           <p className={styles["reply__text"]}>Reply</p>
