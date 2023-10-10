@@ -7,7 +7,7 @@ type CardFeedbackProps = {
   liked: boolean;
   setLiked: Dispatch<SetStateAction<boolean>>;
 };
-//not this is a change
+
 export default function CardFeedback({
   feedbackCount,
   setFeedbackCount,

@@ -1,6 +1,6 @@
 {
   "name": "comment-section-project",
-  "homepage": "http://jvb3.githubb.io/comment-section",
+  "homepage": "http://jvb3.githubb.io/comments-section",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
