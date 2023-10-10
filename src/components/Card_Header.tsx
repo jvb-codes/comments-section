@@ -1,0 +1,90 @@
+import RepHeader from "./Rep_Header";
+import ComHeader from "./Com_Header";
+import styles from "../styles/Rep_Header.module.css";
+import {
+  useOpenEditBox,
+  useHandleDeleteComment,
+} from "../context/Cards_Context";
+
+type HeaderProps = {
+  userName: string;
+  profileImg: string;
+  date: string;
+  parentCommentID: number;
+  edit: boolean;
+};
+
+function CardHeader({
+  userName,
+  profileImg,
+  date,
+  parentCommentID,
+  edit,
+}: HeaderProps) {
+  const { openEditBox } = useOpenEditBox();
+  const { openDeleteDialog } = useHandleDeleteComment();
+  return (
+    <>
+      {userName === "juliusomo" ? (
+        <RepHeader
+          userName={userName}
+          profileImg={profileImg}
+          date={date}
+          parentCommentID={parentCommentID}
+          edit={edit}
+        />
+      ) : (
+        <ComHeader
+          userName={userName}
+          profileImg={profileImg}
+          date={date}
+          parentCommentID={parentCommentID}
+        />
+      )}
+      {userName === "juliusomo" && (
+        <div className={styles["my-reply__footer"]}>
+          {!edit && (
+            <div className={styles["footer__icons"]}>
+              <div className={styles["footer__delete"]}>
+                <svg
+                  width="12"
+                  height="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="hsl(238, 40%, 52%)"
+                  className={styles["header__delete-icon"]}
+                >
+                  <path d="M1.167 12.448c0 .854.7 1.552 1.555 1.552h6.222c.856 0 1.556-.698 1.556-1.552V3.5H1.167v8.948Zm10.5-11.281H8.75L7.773 0h-3.88l-.976 1.167H0v1.166h11.667V1.167Z" />
+                </svg>
+                <p
+                  onClick={() => openDeleteDialog(parentCommentID)}
+                  className={styles["header__delete-text"]}
+                >
+                  Delete
+                </p>
+              </div>
+              <div className={styles["footer__edit"]}>
+                <svg
+                  width="14"
+                  height="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#5357B6"
+                  className={styles["header__edit-icon"]}
+                >
+                  <path d="M13.479 2.872 11.08.474a1.75 1.75 0 0 0-2.327-.06L.879 8.287a1.75 1.75 0 0 0-.5 1.06l-.375 3.648a.875.875 0 0 0 .875.954h.078l3.65-.333c.399-.04.773-.216 1.058-.499l7.875-7.875a1.68 1.68 0 0 0-.061-2.371Zm-2.975 2.923L8.159 3.449 9.865 1.7l2.389 2.39-1.75 1.706Z" />
+                </svg>
+                <p
+                  onClick={() => openEditBox(parentCommentID)}
+                  className={styles["header__edit-text"]}
+                >
+                  Edit
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </>
+  );
+}
+
+export default CardHeader;

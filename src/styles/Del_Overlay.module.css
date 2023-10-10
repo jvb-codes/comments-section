@@ -1,0 +1,95 @@
+.overlay
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+
+}
+
+.dialog-box
+{
+
+    background: white;
+    height: auto;
+    width: 400px;
+    border-radius: 8px;
+    ;
+
+}
+
+.header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    gap: 2rem
+}
+
+.header p
+{
+    margin: 0;
+}
+
+.title
+{
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: var(--darkBlue);
+}
+
+.description
+{
+    color: var(--grayish-blue)
+}
+
+.buttons
+{
+
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cancel-button
+{
+
+    width: 161px;
+    height: 48px;
+    color: white;
+    border-radius: 8px;
+    border: 0;
+    font-family: Rubik;
+    background-color: var(--grayish-blue);
+}
+
+.delete-button
+{
+
+    background-color: var(--soft-red);
+    width: 161px;
+    height: 48px;
+    color: white;
+    font-family: Rubik;
+    border-radius: 8px;
+    border: 0;
+
+}
+
+@media (max-width: 477px)
+{
+    .dialog-box
+    {
+        width: 350px;
+    }
+}

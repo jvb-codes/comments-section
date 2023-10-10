@@ -1,0 +1,176 @@
+.card__header
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__avatar
+{
+    width: 2rem;
+    height: 2rem;
+}
+
+.header__name
+{
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.header__identifier
+{
+    color: white;
+    background-color: var(--moderate-blue);
+    border-radius: 2px;
+    padding: 3px 6px;
+    font-weight: 700;
+}
+
+.header__date
+{
+    color: var(--grayish-blue);
+}
+
+.header__icons
+{
+    display: flex;
+    margin-left: auto;
+    gap: 1rem;
+
+
+}
+
+.icons__delete
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icons__edit
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header__delete-icon
+{
+    height: 14px;
+    width: 12px;
+}
+
+.header__delete-icon:hover
+{
+    cursor: pointer;
+    fill: var(--pale-red)
+}
+
+.header__delete-text
+{
+    color: var(--moderate-blue);
+    font-weight: 700;
+    line-height: 24px;
+
+}
+
+.header__delete-text:hover
+{
+    color: var(--pale-red);
+    cursor: pointer;
+}
+
+.header__edit-icon:hover
+{
+    cursor: pointer;
+    fill: var(--light-grayish-blue)
+}
+
+.header__edit-text
+{
+    color: var(--moderate-blue);
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.header__edit-text:hover
+{
+    cursor: pointer;
+    color: var(--light-grayish-blue)
+}
+
+@media (min-width: 657px)
+{
+
+
+    .footer__icons
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 656px)
+{
+    .header__icons
+    {
+        display: none;
+    }
+
+
+    .my-reply__footer
+    {
+
+        display: flex;
+        align-items: center;
+        order: 1;
+
+    }
+
+    .footer__feedback
+    {
+        border-radius: 10px;
+        max-height: 40px;
+        flex-basis: 100px;
+        background-color: var(--very-light-gray);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .footer__icons
+    {
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .footer__delete
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer__edit
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 477px)
+{
+    .my-reply__footer
+    {
+        display: none;
+    }
+}

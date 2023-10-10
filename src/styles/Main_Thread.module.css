@@ -1,0 +1,13 @@
+.wrapper
+{
+    background-color: var(--very-light-gray);
+    min-height: 100vh;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+
+}
